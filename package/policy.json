@@ -1,0 +1,25 @@
+{
+  "schema_version": "vfcs-policy-0.1",
+  "redaction": {
+    "pii": "replace with [REDACTED] and store sha512 of original in *_hash fields",
+    "secrets": "never store plaintext secrets; store only hashes and context hints"
+  },
+  "retention": {"events": "immutable", "verdicts": "append-only"},
+  "data_usage": {
+    "training_with_customer_data": false,
+    "retention_period_days": 90,
+    "data_residency": "EU (demo)",
+    "third_party_sharing": false,
+    "note": "Provider contractually prohibited from using submitted data for model training or fine-tuning."
+  },
+  "access_control": {
+    "revocation_sla_minutes": 5,
+    "revocation_method": "API key invalidation via admin portal or emergency kill switch endpoint",
+    "kill_switch_documented": true,
+    "kill_switch_ref": "https://example.invalid/docs/emergency-revocation"
+  },
+  "limitations": [
+    "This demo VDP does not prove environment integrity (no hardware attestation).",
+    "It proves package integrity and signer identity when signed."
+  ]
+}

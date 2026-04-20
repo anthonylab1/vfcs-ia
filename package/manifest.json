@@ -1,0 +1,53 @@
+{
+  "schema_version": "vfcs-vdp-manifest-0.2",
+  "package_id": "98196df5-5a1f-4973-98ff-59094fcf189d",
+  "created_at": "2026-04-10T15:31:03Z",
+  "signing": {
+    "method": "gpg_detached_signature",
+    "signature_file": "signature.asc",
+    "signer_key_fingerprint": "PENDING",
+    "note": "Run ./scripts/sign.sh to generate a real signature."
+  },
+  "files": [
+    {
+      "path": "package/system_under_test.json",
+      "sha512": "111139bf8e6f4a10b948ada605fbcf7b2cdb6bab40d5057561e4b0e61af3f0e39cc14f62d31191578761e954b884c1c415e4dd0871701b474a9fe306395a79fe"
+    },
+    {
+      "path": "package/policy.json",
+      "sha512": "ff77132b1f61dd7d40e1b793d77e0d2147746bd04cf3191e2ad15275ccafc1a3d198e87af920fe65638007b58c80e5452f190669811ee1b8bf4c22e8d12e52ce"
+    },
+    {
+      "path": "package/events/0001_GEN.json",
+      "sha512": "5f2371bb3d01e8226ec2d7f3eb98915f1db75b7a8e6df022bbbb5fa3624c2555041aa4f445d32bd126f509547f56a10fcaf4321e73a179de69668c697506d761"
+    },
+    {
+      "path": "package/events/0002_EVAL.json",
+      "sha512": "d40f4335d75f1e70b1fa7bd185b20c1598990b4cb4d0c8369f7871fac8950a244b1ded338bd61ee803ffd7b4730b55fc112dc2fe33eeb54588a945f49ba807a0"
+    },
+    {
+      "path": "package/events/0003_CLASS.json",
+      "sha512": "4ab9ae2d6d9f38218923e2ff95d567f326889e7adfb5370586367df3b02555de2b591c574254fad9b53ec5e999a35b7e09a180a9de98a0f1190335fe654e26b0"
+    }
+  ],
+  "event_chain": [
+    {
+      "path": "package/events/0001_GEN.json",
+      "event_sha512": "5f2371bb3d01e8226ec2d7f3eb98915f1db75b7a8e6df022bbbb5fa3624c2555041aa4f445d32bd126f509547f56a10fcaf4321e73a179de69668c697506d761",
+      "prev_chain": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "chain_sha512": "875b42d41ca400d91a4775397b3dd614d504ec2b4bf10134e49ee7bf713ebe9fbfc15f7840c42fb6a3071489b4f261b313d83eb96e9ef49bc0d4c90ec2415e1e"
+    },
+    {
+      "path": "package/events/0002_EVAL.json",
+      "event_sha512": "d40f4335d75f1e70b1fa7bd185b20c1598990b4cb4d0c8369f7871fac8950a244b1ded338bd61ee803ffd7b4730b55fc112dc2fe33eeb54588a945f49ba807a0",
+      "prev_chain": "875b42d41ca400d91a4775397b3dd614d504ec2b4bf10134e49ee7bf713ebe9fbfc15f7840c42fb6a3071489b4f261b313d83eb96e9ef49bc0d4c90ec2415e1e",
+      "chain_sha512": "492921c7ea0b95e020d49649dfbcb2c535ac39c78233ce1c05b9ebf275cda36f51e367a0da7085009547b03b072c172a1980af2cff165ca639539e0ad8943925"
+    },
+    {
+      "path": "package/events/0003_CLASS.json",
+      "event_sha512": "4ab9ae2d6d9f38218923e2ff95d567f326889e7adfb5370586367df3b02555de2b591c574254fad9b53ec5e999a35b7e09a180a9de98a0f1190335fe654e26b0",
+      "prev_chain": "492921c7ea0b95e020d49649dfbcb2c535ac39c78233ce1c05b9ebf275cda36f51e367a0da7085009547b03b072c172a1980af2cff165ca639539e0ad8943925",
+      "chain_sha512": "57bb80b2dccb74c203f50746a3e1a4b2db569c5b0e0f006a05b8ecbe4d5e80efe0b5d9789df80928529e1159c862fab5b777611e2e32bd52de83d4b1cc84e88a"
+    }
+  ]
+}

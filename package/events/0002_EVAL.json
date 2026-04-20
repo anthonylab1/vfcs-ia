@@ -1,0 +1,27 @@
+{
+  "schema_version": "vfcs-event-1.0",
+  "event_id": "evt-0002-eval",
+  "stage": "EVAL",
+  "event_type": "llm_execution",
+  "timestamp": "2026-03-08T07:09:35Z",
+  "actor": {"type": "service", "id": "svc_llm_gateway_demo"},
+  "sut_ref": "system_under_test.json",
+  "input_ref": "events/0001_GEN.json",
+  "output": {
+    "summary": [
+      "The contract outlines a fixed-term lease with renewal options.",
+      "It includes termination on material breach, non-payment, or mutual agreement."
+    ],
+    "termination_clauses": [
+      "Termination for non-payment after notice period.",
+      "Termination for breach of obligations after cure period.",
+      "Early termination by mutual agreement."
+    ]
+  },
+  "metadata": {
+    "model_id": "demo-model-1",
+    "provider": "SyntheticVendor",
+    "temperature": 0.2,
+    "top_p": 0.95
+  }
+}

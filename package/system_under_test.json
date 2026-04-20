@@ -1,0 +1,24 @@
+{
+  "sut_id": "demo-llm-gateway",
+  "vendor": "SyntheticVendor",
+  "product": "DemoLLMGateway",
+  "version": "2026.03-demo",
+  "endpoint": "https://example.invalid/llm",
+  "config_hash": "sha512:cde57134f97736d50e489cafee663e58881dd7b87339713fbcbaf6988fecb5677ecf4d5a2bd7c4f9dff028b7eb9fb406f0070e9f24a615161af791276d712823",
+  "access_scopes": {
+    "read_internal_systems": false,
+    "write_internal_systems": false,
+    "email_access": false,
+    "dlp_bypass": false,
+    "permitted_data_types": ["unstructured text submitted explicitly by user"],
+    "note": "The gateway has no standing access to internal systems. Each request is stateless and scoped to the submitted payload only."
+  },
+  "revocation": {
+    "method": "API key invalidation",
+    "sla_minutes": 5,
+    "self_service": true,
+    "contact": "admin@example.invalid",
+    "kill_switch_url": "https://example.invalid/admin/revoke"
+  },
+  "notes": "SUT metadata for demonstration only; not an attestation."
+}

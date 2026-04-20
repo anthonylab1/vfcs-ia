@@ -1,0 +1,15 @@
+{
+  "schema_version": "vfcs-event-1.0",
+  "event_id": "evt-0001-gen",
+  "stage": "GEN",
+  "event_type": "prompt_capture",
+  "timestamp": "2026-03-08T07:09:35Z",
+  "actor": {"type": "user", "id": "user_demo_001"},
+  "input_redacted": "Please summarize the contract and list any termination clauses. Tenant name: [REDACTED].",
+  "input_hash": "sha512:9ae902b937a87cbeefb4127dc347d6c91ea602604304fb98cf430189e8962eb774d05ce401c5e85fc19c53af161128344bcdfc11ddd05307247ac162c843d1db",
+  "metadata": {
+    "channel": "web",
+    "case_id": "case-demo-2026-03-08",
+    "pii_present": true
+  }
+}

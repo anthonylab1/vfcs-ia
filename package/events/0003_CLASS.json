@@ -1,0 +1,34 @@
+{
+  "schema_version": "vfcs-event-1.1",
+  "event_id": "evt-0003-class",
+  "stage": "CLASS",
+  "event_type": "decision",
+  "timestamp": "2026-03-08T07:09:35Z",
+  "actor": {
+    "type": "reviewer",
+    "id": "reviewer_demo_001"
+  },
+  "decision": {
+    "status": "accepted",
+    "icc": 92,
+    "risk_tag": "VAL"
+  },
+  "validation": {
+    "method": "human_review",
+    "criteria": [
+      "coherencia con input",
+      "sin alucinaciones detectadas",
+      "respuesta completa"
+    ]
+  },
+  "basis": {
+    "checked_against_source": true,
+    "notes": "Validado contra la evidencia disponible; no se detectan cláusulas inventadas ni omisiones relevantes."
+  },
+  "references": {
+    "gen_event": "package/events/0001_GEN.json",
+    "gen_event_sha512": "5f2371bb3d01e8226ec2d7f3eb98915f1db75b7a8e6df022bbbb5fa3624c2555041aa4f445d32bd126f509547f56a10fcaf4321e73a179de69668c697506d761",
+    "eval_event": "package/events/0002_EVAL.json",
+    "eval_event_sha512": "d40f4335d75f1e70b1fa7bd185b20c1598990b4cb4d0c8369f7871fac8950a244b1ded338bd61ee803ffd7b4730b55fc112dc2fe33eeb54588a945f49ba807a0"
+  }
+}

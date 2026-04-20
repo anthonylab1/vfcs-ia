@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>VFCS Viewer</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .ok { color: green; }
+    .fail { color: red; }
+    .box { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+
+<h1>VFCS Viewer</h1>
+
+<button onclick="loadManifest()">Load package</button>
+
+<div id="status" class="box"></div>
+<div id="events" class="box"></div>
+<div id="files" class="box"></div>
+
+<script>
+async function sha512(text) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text);
+  const hash = await crypto.subtle.digest("SHA-512", data);
+  return Array.from(new Uint8Array(hash))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function sha512File(url) {
+  const res = await fetch(url);
+  const buf = await res.arrayBuffer();
+  const hash = await crypto.subtle.digest("SHA-512", buf);
+  return Array.from(new Uint8Array(hash))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function loadManifest() {
+  try {
+    const res = await fetch('package/manifest.json');
+    const data = await res.json();
+
+    let ok = true;
+
+    // Verificar archivos
+    let filesHTML = '<b>Files</b><br>';
+    for (const f of data.files) {
+      try {
+        const real = await sha512File(f.path);
+        if (real.toLowerCase() !== f.sha512.toLowerCase()) {
+          ok = false;
+          filesHTML += '<span class="fail">FAIL</span> ' + f.path + '<br>';
+        } else {
+          filesHTML += '<span class="ok">OK</span> ' + f.path + '<br>';
+        }
+      } catch {
+        ok = false;
+        filesHTML += '<span class="fail">FAIL</span> ' + f.path + '<br>';
+      }
+    }
+
+    document.getElementById('files').innerHTML = filesHTML;
+
+    // Verificar cadena de eventos
+    let eventsHTML = '<b>Event Chain</b><br>';
+    let prev = "0".repeat(128);
+
+    for (const e of data.event_chain) {
+      const realEventHash = await sha512File(e.path);
+      const recomputed = await sha512(prev + realEventHash);
+
+      if (
+        realEventHash.toLowerCase() !== e.event_sha512.toLowerCase() ||
+        recomputed.toLowerCase() !== e.chain_sha512.toLowerCase()
+      ) {
+        ok = false;
+        eventsHTML += '<span class="fail">FAIL</span> ' + e.path + '<br>';
+      } else {
+        eventsHTML += '<span class="ok">OK</span> ' + e.path + '<br>';
+      }
+
+      prev = recomputed;
+    }
+
+    document.getElementById('events').innerHTML = eventsHTML;
+
+    // Estado final
+    document.getElementById('status').innerHTML =
+      '<b>Status:</b> <span class="' + (ok ? 'ok' : 'fail') + '">' +
+      (ok ? 'OK' : 'FAIL') +
+      '</span>';
+
+  } catch (e) {
+    document.getElementById('status').innerHTML =
+      '<b>Status:</b> <span class="fail">FAIL</span>';
+  }
+}
+</script>
+
+</body>
+</html>
