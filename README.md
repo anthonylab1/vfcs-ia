@@ -123,6 +123,7 @@ FAIL → manipulación detectada
 
 ## Estructura del repositorio / Repository structure
 
+```text
 vfcs-ia/
 ├── scripts/
 ├── package/
@@ -133,6 +134,7 @@ vfcs-ia/
 ├── viewer/
 ├── docs/
 ├── README.md
+```
 
 ---
 
