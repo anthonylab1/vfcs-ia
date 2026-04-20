@@ -146,18 +146,21 @@ vfcs-ia/
 
 ---
 
+---
+
 ##  Garantías / Guarantees
 
+**ES**
 - Integridad verificable mediante SHA-512  
 - Detección de manipulaciones  
 - Trazabilidad completa de eventos  
 - Verificación independiente  
 
-
+**EN**
 - Verifiable integrity via SHA-512  
 - Tamper detection  
 - Full event traceability  
-- Independent verification
+- Independent verification  
 
 ---
 
