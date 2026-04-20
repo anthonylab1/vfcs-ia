@@ -157,14 +157,20 @@ vfcs-ia/
 - Integridad verificable mediante SHA-512  
 - Verifiable integrity via SHA-512  
 
+<br>
+
 - Detección de manipulaciones  
 - Tamper detection  
+
+<br>
 
 - Trazabilidad completa de eventos  
 - Full event traceability  
 
+<br>
+
 - Verificación independiente  
-- Independent verification   
+- Independent verification    
 
 ---
 
