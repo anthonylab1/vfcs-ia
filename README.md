@@ -239,6 +239,18 @@ Independent developer - Spain
 
 ---
 
+## Intellectual Property Notice
+
+This project is registered in the Spanish Intellectual Property Registry.
+
+Registration number: 16/2026/2013
+
+The registration covers the original expression, structure, and documentation of the VFCS-IA system.
+
+This repository is released under a custom non-commercial license. Commercial use requires explicit permission from the author.
+
+---
+
 ## Licencia / License
 
-MIT
+Custom Non-Commercial License
