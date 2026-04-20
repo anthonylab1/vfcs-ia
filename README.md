@@ -58,14 +58,17 @@ VFCS-IA introduces:
 
 Input → GEN → EVAL → CLASS → Manifest → Signature → Output
 
-GEN: captura la entrada y genera su hash  
-GEN: captures input and generates its hash  
+GEN:
+- se registra la entrada  
+- input is recorded  
 
-EVAL: ejecuta el sistema y produce una salida  
-EVAL: executes the system and produces output  
+EVAL:
+- el sistema genera la respuesta  
+- system generates output  
 
-CLASS: valida el resultado y enlaza todas las fases  
-CLASS: validates the result and links all stages  
+CLASS:
+- se valida coherencia y ausencia de errores  
+- coherence and correctness are validated  
 
 ---
 
@@ -146,21 +149,19 @@ vfcs-ia/
 
 ---
 
----
+## Garantías / Guarantees
 
-##  Garantías / Guarantees
+- Integridad verificable mediante SHA-512  
+- Verifiable integrity via SHA-512  
 
-Integridad verificable mediante SHA-512  
-Verifiable integrity via SHA-512  
+- Detección de manipulaciones  
+- Tamper detection  
 
-Detección de manipulaciones  
-Tamper detection  
+- Trazabilidad completa de eventos  
+- Full event traceability  
 
-Trazabilidad completa de eventos  
-Full event traceability  
-
-Verificación independiente  
-Independent verification  
+- Verificación independiente  
+- Independent verification  
 
 ---
 
@@ -175,14 +176,14 @@ Independent verification
 
 ## Limitaciones / Limitations
 
-Prototipo (MVP)  
-Prototype (MVP)  
+- Prototipo (MVP)  
+- Prototype (MVP)  
 
-No valida integridad del entorno completo  
-Does not validate full environment integrity  
+- No valida integridad del entorno completo  
+- Does not validate full environment integrity  
 
-Requiere gestión de claves  
-Requires proper key management  
+- Requiere gestión de claves  
+- Requires proper key management  
 
 ---
 
