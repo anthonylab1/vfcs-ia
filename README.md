@@ -230,6 +230,12 @@ vfcs-ia/
 - Requiere gestión de claves  
 - Requires proper key management   
 
+- Firma GPG interactiva en el MVP  
+- GPG signing is interactive in the MVP  
+
+- Diseñado para firma automatizada en entornos de producción  
+- Designed for automated signing in production environments
+
 ---
 
 ## Autor / Author
