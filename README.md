@@ -162,6 +162,10 @@ vfcs-ia/
 │       └── 0003_CLASS.json
 ├── viewer/
 ├── docs/
+│   └── media/
+│       ├── demo_ok.png
+│       ├── demo_fail.png
+│       └── demo_export.png
 ├── README.md
 ```
 
