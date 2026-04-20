@@ -150,17 +150,17 @@ vfcs-ia/
 
 ##  Garantías / Guarantees
 
-**ES**
-- Integridad verificable mediante SHA-512  
-- Detección de manipulaciones  
-- Trazabilidad completa de eventos  
-- Verificación independiente  
+Integridad verificable mediante SHA-512  
+Verifiable integrity via SHA-512  
 
-**EN**
-- Verifiable integrity via SHA-512  
-- Tamper detection  
-- Full event traceability  
-- Independent verification  
+Detección de manipulaciones  
+Tamper detection  
+
+Trazabilidad completa de eventos  
+Full event traceability  
+
+Verificación independiente  
+Independent verification  
 
 ---
 
@@ -175,9 +175,14 @@ vfcs-ia/
 
 ## Limitaciones / Limitations
 
-- prototipo (MVP)  
-- no valida integridad del entorno completo  
-- requiere gestión de claves  
+Prototipo (MVP)  
+Prototype (MVP)  
+
+No valida integridad del entorno completo  
+Does not validate full environment integrity  
+
+Requiere gestión de claves  
+Requires proper key management  
 
 ---
 
