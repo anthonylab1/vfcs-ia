@@ -1,6 +1,7 @@
 # VFCS-IA
 
 Verifiable Flow for Critical Systems – Intelligent Architecture
+
 A cryptographic audit layer for AI systems that makes outputs verifiable, traceable, and tamper-evident.
 
 Proyecto independiente de investigación enfocado en la validación criptográfica, trazabilidad y auditoría de decisiones en sistemas de IA.  
