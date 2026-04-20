@@ -132,6 +132,19 @@ FAIL → manipulación detectada
 
 ---
 
+## Demo
+
+### Verificación correcta / Successful verification
+![OK](docs/media/demo_ok.png)
+
+### Detección de manipulación / Tamper detection
+![FAIL](docs/media/demo_fail.png)
+
+### Exportación del paquete / Package export
+![EXPORT](docs/media/demo_export.png)
+
+---
+
 ## Estructura del repositorio / Repository structure
 
 ```text
