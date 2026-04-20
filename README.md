@@ -1,18 +1,16 @@
 # VFCS-IA
 
-Validated Flow for Critical Systems – Intelligent Architecture
+Verifiable Flow for Critical Systems – Intelligent Architecture
 
 Proyecto independiente de investigación enfocado en la validación criptográfica, trazabilidad y auditoría de decisiones en sistemas de IA.  
 Independent research project focused on cryptographic validation, traceability, and auditability of AI system decisions.
-
-Autor / Author: Antonio Tena Salguero (Spain)
 
 ---
 
 ## TL;DR
 
-VFCS-IA es un framework que convierte decisiones de sistemas de IA en evidencia verificable mediante hashing SHA-512, encadenado de eventos (GEN → EVAL → CLASS) y firma digital.  
-VFCS-IA is a framework that turns AI system decisions into verifiable evidence using SHA-512 hashing, chained events (GEN → EVAL → CLASS), and digital signatures.
+VFCS-IA es un framework que convierte salidas de IA en evidencia verificable mediante hashing SHA-512, encadenado de eventos (GEN → EVAL → CLASS) y firma digital.  
+VFCS-IA is a framework that turns AI outputs into verifiable evidence using SHA-512 hashing, chained events (GEN → EVAL → CLASS), and digital signatures.
 
 ---
 
@@ -58,7 +56,7 @@ VFCS-IA introduces:
 
 ## Flujo del sistema / System flow
 
-Input → GEN → EVAL → CLASS → Output
+Input → GEN → EVAL → CLASS → Manifest → Signature → Output
 
 GEN: captura la entrada y genera su hash  
 GEN: captures input and generates its hash  
@@ -83,6 +81,9 @@ Each event generates:
 
 Esto crea una secuencia resistente a manipulaciones.  
 This creates a tamper-evident sequence.
+
+El hash encadenado incluye el hash del evento anterior, formando una estructura tipo blockchain.
+The chained hash includes the previous event hash, forming a blockchain-like structure.
 
 ---
 
@@ -109,7 +110,7 @@ Ejecutar:
 ```bash
 ./scripts/export_package.sh
 ./scripts/verify.sh
-./test_roundtrip.sh
+./test_roundtrip.sh  # root-level test
 ```
 
 Resultado esperado:
@@ -135,10 +136,28 @@ vfcs-ia/
 │   ├── checksums.sha512
 │   ├── signature.asc
 │   └── events/
+│       ├── 0001_GEN.json
+│       ├── 0002_EVAL.json
+│       └── 0003_CLASS.json
 ├── viewer/
 ├── docs/
 ├── README.md
 ```
+
+---
+
+##  Garantías / Guarantees
+
+- Integridad verificable mediante SHA-512  
+- Detección de manipulaciones  
+- Trazabilidad completa de eventos  
+- Verificación independiente  
+
+
+- Verifiable integrity via SHA-512  
+- Tamper detection  
+- Full event traceability  
+- Independent verification
 
 ---
 
@@ -162,7 +181,7 @@ vfcs-ia/
 ## Autor / Author
 
 Antonio Tena Salguero  
-Independent developer (Spain)
+Independent developer - Spain
 
 ---
 
