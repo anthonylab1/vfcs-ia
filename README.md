@@ -95,14 +95,17 @@ The chained hash includes the previous event hash, forming a blockchain-like str
 Entrada: petición de resumen de contrato con cláusulas de terminación  
 Input: request for contract summary with termination clauses  
 
-GEN: se registra la entrada  
-GEN: input is recorded  
+GEN:
+- se registra la entrada  
+- input is recorded  
 
-EVAL: el sistema genera la respuesta  
-EVAL: system generates output  
+EVAL:
+- el sistema genera la respuesta  
+- system generates output  
 
-CLASS: se valida coherencia y ausencia de errores  
-CLASS: coherence and correctness are validated  
+CLASS:
+- se valida coherencia y ausencia de errores  
+- coherence and correctness are validated  
 
 ---
 
