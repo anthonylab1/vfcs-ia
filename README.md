@@ -106,18 +106,22 @@ CLASS: coherence and correctness are validated
 
 Ejecutar:
 
-./scripts/export_package.sh  
-./scripts/verify.sh  
-./test_roundtrip.sh  
+```bash
+./scripts/export_package.sh
+./scripts/verify.sh
+./test_roundtrip.sh
+```
 
 Resultado esperado:
 
-VFCS EXPORT: OK  
-VFCS VERIFY: OK  
-VFCS ROUNDTRIP: OK  
+```text
+VFCS EXPORT: OK
+VFCS VERIFY: OK
+VFCS ROUNDTRIP: OK
+```
 
 OK → integridad verificada  
-FAIL → manipulación detectada  
+FAIL → manipulación detectada   
 
 ---
 
