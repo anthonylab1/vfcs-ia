@@ -176,10 +176,23 @@ vfcs-ia/
 
 ## Casos de uso / Use cases
 
-- auditoría de decisiones de IA / AI audit trails  
-- validación forense / forensic validation  
-- cumplimiento normativo / compliance workflows  
-- pipelines seguros / secure pipelines  
+- auditoría de decisiones de IA  
+- AI audit trails  
+
+<br>
+
+- validación forense  
+- forensic validation  
+
+<br>
+
+- cumplimiento normativo  
+- compliance workflows  
+
+<br>
+
+- pipelines seguros  
+- secure pipelines  
 
 ---
 
