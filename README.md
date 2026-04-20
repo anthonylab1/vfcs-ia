@@ -164,7 +164,7 @@ vfcs-ia/
 - Full event traceability  
 
 - Verificación independiente  
-- Independent verification  
+- Independent verification   
 
 ---
 
