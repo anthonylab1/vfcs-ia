@@ -201,11 +201,15 @@ vfcs-ia/
 - Prototipo (MVP)  
 - Prototype (MVP)  
 
+<br>
+
 - No valida integridad del entorno completo  
 - Does not validate full environment integrity  
 
+<br>
+
 - Requiere gestión de claves  
-- Requires proper key management  
+- Requires proper key management   
 
 ---
 
