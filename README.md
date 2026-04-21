@@ -144,56 +144,29 @@ vfcs-ia/
 ---
 
 ## Guarantees
- 
-- Verifiable integrity via SHA-512  
 
-<br>
- - Tamper detection  
-
-<br>
- - Full event traceability  
-
-<br>
- - Independent verification    
+- Verifiable integrity via SHA-512
+- Tamper detection
+- Full event traceability
+- Independent verification
 
 ---
 
 ## Use cases
- 
-- AI audit trails  
 
-<br>
-  
-- forensic validation  
-
-<br>
-  
-- compliance workflows  
-
-<br>
-  
-- secure pipelines  
+- AI audit trails
+- Forensic validation
+- Compliance workflows
+- Secure pipelines
 
 ---
 
 ## Limitations
-  
-- Prototype (MVP)  
 
-<br>
-  
-- Does not validate full environment integrity  
-
-<br>
-  
-- Requires proper key management  
-
-<br>
- 
-- GPG signing is interactive in the MVP  
-
-<br>
-  
+- Prototype (MVP)
+- Does not validate full environment integrity
+- Requires proper key management
+- GPG signing is interactive in the MVP
 - Designed for automated signing in production environments
 
 ---
