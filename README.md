@@ -3,35 +3,26 @@
 Verifiable Flow for Critical Systems – Intelligent Architecture
 
 A cryptographic audit layer for AI systems that makes outputs verifiable, traceable, and tamper-evident.
-
-Proyecto independiente de investigación enfocado en la validación criptográfica, trazabilidad y auditoría de decisiones en sistemas de IA.  
+ 
 Independent research project focused on cryptographic validation, traceability, and auditability of AI system decisions.
 
 ---
 
 ## TL;DR
-
-VFCS-IA es un framework que convierte salidas de IA en evidencia verificable mediante hashing SHA-512, encadenado de eventos (GEN → EVAL → CLASS) y firma digital.  
+ 
 VFCS-IA is a framework that turns AI outputs into verifiable evidence using SHA-512 hashing, chained events (GEN → EVAL → CLASS), and digital signatures.
 
 ---
 
-## Qué es / What it is
-
-VFCS-IA define un flujo estructurado para registrar, validar y verificar decisiones de IA.  
+## What it is
+ 
 VFCS-IA defines a structured flow to record, validate, and verify AI decisions.
 
-Convierte una salida de IA en un paquete auditable con integridad comprobable.  
 It transforms an AI output into an auditable package with provable integrity.
 
 ---
 
-## Problema / Problem
-
-Los sistemas de IA actuales no garantizan:
-- que una salida no haya sido modificada  
-- trazabilidad completa entre entrada, proceso y resultado  
-- capacidad de auditoría técnica o forense  
+## Problem
 
 Modern AI systems do not guarantee:
 - that an output has not been modified  
@@ -40,13 +31,7 @@ Modern AI systems do not guarantee:
 
 ---
 
-## Solución / Solution
-
-VFCS-IA introduce:
-- hashing SHA-512 de cada elemento  
-- encadenado de eventos mediante hashes  
-- manifest con integridad verificable  
-- firma digital GPG  
+## Solution
 
 VFCS-IA introduces:
 - SHA-512 hashing per element  
@@ -56,64 +41,51 @@ VFCS-IA introduces:
 
 ---
 
-## Flujo del sistema / System flow
+## System flow
 
 Input → GEN → EVAL → CLASS → Manifest → Signature → Output
 
-GEN:
-- se registra la entrada  
+GEN:  
 - input is recorded  
 
-EVAL:
-- el sistema genera la respuesta  
+EVAL:  
 - system generates output  
 
-CLASS:
-- se valida coherencia y ausencia de errores  
+CLASS:  
 - coherence and correctness are validated  
 
 ---
 
-## Cadena de eventos / Event chain
-
-Cada evento genera:
-- hash propio (event_sha512)  
-- hash encadenado con el anterior (chain_sha512)  
+## Event chain
 
 Each event generates:
 - its own hash (event_sha512)  
 - a chained hash including the previous state (chain_sha512)  
 
-Esto crea una secuencia resistente a manipulaciones.  
 This creates a tamper-evident sequence.
 
-El hash encadenado incluye el hash del evento anterior, formando una estructura tipo blockchain.
 The chained hash includes the previous event hash, forming a blockchain-like structure.
 
 ---
 
-## Ejemplo / Example
+## Example
 
-Entrada: petición de resumen de contrato con cláusulas de terminación  
 Input: request for contract summary with termination clauses  
 
-GEN:
-- se registra la entrada  
+GEN: 
 - input is recorded  
 
-EVAL:
-- el sistema genera la respuesta  
+EVAL:  
 - system generates output  
 
-CLASS:
-- se valida coherencia y ausencia de errores  
+CLASS:  
 - coherence and correctness are validated  
 
 ---
 
-## Uso / Usage
+## Usage
 
-Ejecutar:
+Run:
 
 ```bash
 ./scripts/export_package.sh
@@ -121,7 +93,7 @@ Ejecutar:
 ./test_roundtrip.sh  # root-level test
 ```
 
-Resultado esperado:
+Excepted output:
 
 ```text
 VFCS EXPORT: OK
@@ -129,25 +101,25 @@ VFCS VERIFY: OK
 VFCS ROUNDTRIP: OK
 ```
 
-OK → integridad verificada  
-FAIL → manipulación detectada   
+OK → integrity verified  
+FAIL → tampering detected   
 
 ---
 
 ## Demo
 
-### Verificación correcta / Successful verification
+### Successful verification
 ![OK](docs/media/demo_ok.png)
 
-### Detección de manipulación / Tamper detection
+### Tamper detection
 ![FAIL](docs/media/demo_fail.png)
 
-### Exportación del paquete / Package export
+### Package export
 ![EXPORT](docs/media/demo_export.png)
 
 ---
 
-## Estructura del repositorio / Repository structure
+## Repository structure
 
 ```text
 vfcs-ia/
@@ -171,78 +143,65 @@ vfcs-ia/
 
 ---
 
-## Garantías / Guarantees
-
-- Integridad verificable mediante SHA-512  
+## Guarantees
+ 
 - Verifiable integrity via SHA-512  
 
 <br>
-
-- Detección de manipulaciones  
+  
 - Tamper detection  
 
 <br>
-
-- Trazabilidad completa de eventos  
+  
 - Full event traceability  
 
 <br>
-
-- Verificación independiente  
+  
 - Independent verification    
 
 ---
 
-## Casos de uso / Use cases
-
-- auditoría de decisiones de IA  
+## Use cases
+ 
 - AI audit trails  
 
 <br>
-
-- validación forense  
+  
 - forensic validation  
 
 <br>
-
-- cumplimiento normativo  
+  
 - compliance workflows  
 
 <br>
-
-- pipelines seguros  
+  
 - secure pipelines  
 
 ---
 
-## Limitaciones / Limitations
-
-- Prototipo (MVP)  
+## Limitations
+  
 - Prototype (MVP)  
 
 <br>
-
-- No valida integridad del entorno completo  
+  
 - Does not validate full environment integrity  
 
 <br>
-
-- Requiere gestión de claves  
+  
 - Requires proper key management  
 
 <br>
-
-- Firma GPG interactiva en el MVP  
+ 
 - GPG signing is interactive in the MVP  
 
 <br>
-
-- Diseñado para firma automatizada en entornos de producción  
+  
 - Designed for automated signing in production environments
 
 ---
 
-## Autor / Author
+## Author
 
 Antonio Tena Salguero  
 Independent developer - Spain
