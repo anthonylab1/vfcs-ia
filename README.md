@@ -10,7 +10,7 @@ Independent research project focused on cryptographic validation, traceability, 
 
 ## TL;DR
  
-VFCS-IA is a framework that turns AI outputs into verifiable evidence using SHA-512 hashing, chained events (GEN → EVAL → CLASS), and digital signatures.
+VFCS-IA is a framework that turns AI outputs into verifiable, tamper-evident evidence using SHA-512 hashing, chained events (GEN → EVAL → CLASS), and digital signatures.
 
 ---
 
@@ -52,7 +52,7 @@ EVAL:
 - system generates output  
 
 CLASS:  
-- coherence and structural correctness are validated  
+- coherence and correctness are validated  
 
 ---
 
@@ -62,9 +62,9 @@ Each event generates:
 - its own hash (event_sha512)  
 - a chained hash including the previous state (chain_sha512)  
 
-This creates a tamper-evident sequence.
+This creates a tamper-evident chained sequence.
 
-The chained hash includes the previous event hash, forming a tamper-evident chained structure.
+The chained hash includes the previous event hash, linking each event to the previous state.
 
 ---
 
