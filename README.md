@@ -148,16 +148,13 @@ vfcs-ia/
 - Verifiable integrity via SHA-512  
 
 <br>
-  
-- Tamper detection  
+ - Tamper detection  
 
 <br>
-  
-- Full event traceability  
+ - Full event traceability  
 
 <br>
-  
-- Independent verification    
+ - Independent verification    
 
 ---
 
