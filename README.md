@@ -18,7 +18,7 @@ VFCS-IA is a framework that turns AI outputs into verifiable evidence using SHA-
  
 VFCS-IA defines a structured flow to record, validate, and verify AI decisions.
 
-It transforms an AI output into an auditable package with provable integrity.
+It transforms AI outputs into auditable artifacts with verifiable integrity.
 
 ---
 
@@ -37,7 +37,7 @@ VFCS-IA introduces:
 - SHA-512 hashing per element  
 - chained events via hashes  
 - manifest-based integrity  
-- GPG digital signature  
+- GPG digital signatures  
 
 ---
 
@@ -52,7 +52,7 @@ EVAL:
 - system generates output  
 
 CLASS:  
-- coherence and correctness are validated  
+- coherence and structural correctness are validated  
 
 ---
 
@@ -64,7 +64,7 @@ Each event generates:
 
 This creates a tamper-evident sequence.
 
-The chained hash includes the previous event hash, forming a blockchain-like structure.
+The chained hash includes the previous event hash, forming a tamper-evident chained structure.
 
 ---
 
@@ -93,7 +93,7 @@ Run:
 ./test_roundtrip.sh  # root-level test
 ```
 
-Excepted output:
+Expected output:
 
 ```text
 VFCS EXPORT: OK
@@ -174,7 +174,7 @@ vfcs-ia/
 ## Author
 
 Antonio Tena Salguero  
-Independent developer - Spain
+Independent developer 
 
 ---
 
@@ -190,6 +190,6 @@ This repository is released under a custom non-commercial license. Commercial us
 
 ---
 
-## Licencia / License
+## License
 
 Custom Non-Commercial License
